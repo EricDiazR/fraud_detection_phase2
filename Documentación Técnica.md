@@ -121,13 +121,14 @@ La siguiente tabla presenta el conjunto de datos de prueba utilizado para evalua
 
 El modelo supervisado Random Forest evalúa la combinación de los tres atributos siguiendo las siguientes fronteras de decisión principales:
 
-1. **Patrón de Fuerza Bruta:** 
+1. **Patrón de Fuerza Bruta:**
    $$\text{Si } \text{intentos\_fallidos\_cvv} \ge 3 \implies \text{Predicción} = 1 \text{ (Bloqueada)}$$
+
 2. **Patrón de Desplazamiento Anómalo con Monto Elevado:**
    $$\text{Si } \text{distancia\_habitual\_km} > 400 \text{ km} \quad \text{Y} \quad \text{monto\_usd} > \$1,000.00 \implies \text{Predicción} = 1 \text{ (Bloqueada)}$$
+
 3. **Tráfico Legítimo Sin Fricción:**
    $$\text{Si } \text{intentos\_fallidos\_cvv} = 0 \quad \text{Y} \quad \text{distancia\_habitual\_km} \le 50 \text{ km} \implies \text{Predicción} = 0 \text{ (Aprobada)}$$
-
 ---
 
 #### 6.4 Gestión y Gobierno de Datos
